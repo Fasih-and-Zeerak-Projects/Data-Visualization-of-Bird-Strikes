@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <title>Assignment 2 i200432</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="grid">
+        <div class="grid-item" id="item1">
+          <svg class="diagram1">
+            <g class="d1g"></g>
+          </svg>
+        </div>
+        <div class="grid-item">
+          <svg class="diagram2" viewbox="0 -200 600 800"></svg>
+        </div>
+        <div class="grid-item">
+          <svg class="diagram3">
+            <g class="d3g"></g>
+          </svg>
+        </div>
+        <div class="grid-item">
+          <svg class="diagram4" viewbox="0 0 1 18000">
+            <g class="d4g" transform="translate(0,9000)">
+              <g class="link"></g>
+              <g class="treeNode"></g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script>
+      var d3v4 = window.d3;
+      window.d3 = null;
+    </script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
