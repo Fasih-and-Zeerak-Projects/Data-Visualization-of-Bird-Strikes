@@ -47,6 +47,7 @@ d3.csv("/birdstrikes.csv", function (data) {
 
 let zoom = d3.zoom().on("zoom", handleZoom);
 let zoomTrend = d3.zoom().on("zoom", handleZoomTrend);
+// .translateExtent([0, 0], [320, 670]);
 let zoomBarChart = d3.zoom().on("zoom", handleZoomBarChart);
 let zoomForce = d3.zoom().on("zoom", handleForceZoom);
 
@@ -56,6 +57,7 @@ function handleForceZoom(e) {
 
 function handleZoomTrend(e) {
   d3.select(".diagram3 > g").attr("transform", e.transform);
+  console.log(e.transform);
 }
 
 function handleZoom(e) {
@@ -71,6 +73,8 @@ function initZoom() {
   d3.select(".diagram3").call(zoomTrend);
   d3.select(".diagram4").call(zoom);
   d3.select(".diagram2").call(zoomForce);
+
+  d3.select(".diagram3").call(zoomTrend.scaleBy, 0.9);
 }
 
 // d3.select(".diagram4").call(zoom);
