@@ -30,7 +30,7 @@ let selectedDataYears = [];
 
 let forceDirectedNodesGlobal;
 
-d3.csv("/birdstrikes.csv", function (data) {
+d3.csv("/blob/main/birdstrikes.csv", function (data) {
   globalData.push(data);
 }).then(() => {
   // console.log(globalData);
